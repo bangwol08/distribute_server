@@ -27,7 +27,7 @@ public class Filtering {
                 // 1차 전처리
                 read = rawData.getTitle();
                 read = read.replaceAll("\\[|]|\\<.*?\\>", " "); //HTML 태그 제거 '<content>' 다 제거
-                read = read.replaceAll("\\.|-|\\)", " "); // 일부 특수문자 제거
+                read = read.replaceAll("\\.|-|\\)|\\(|[0-9]+", " "); // 일부 특수문자 제거
                 read = read.toLowerCase();       // 처리된 거 전체 소문자로 변경
 
                 // 최종 전처리 (형태소 라이브러리)
